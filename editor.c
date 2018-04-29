@@ -32,19 +32,19 @@ char	genbuf[ 1024 ];
 int	showansi = 1;
 int	local_article = 0;
 
-bell()
+void bell(void)
 {
     fprintf(stderr,"%c",0x7) ;
 }
 
-abort_bbs()
+void abort_bbs(void)
 {
     fprintf(stderr,"fatal error has occured\n") ;
     reset_tty() ;
     exit(-1) ;
 }
 
-main(argc,argv)
+int main(argc,argv)
 int argc ;
 char *argv[] ;
 {
